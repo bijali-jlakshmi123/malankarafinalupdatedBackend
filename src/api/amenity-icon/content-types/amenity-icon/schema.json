@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "amenity_icons",
+  "info": {
+    "singularName": "amenity-icon",
+    "pluralName": "amenity-icons",
+    "displayName": "Amenity Icon",
+    "description": "Individual amenity icons shown in the facilities grid (Wi-Fi, Pool, BBQ, etc.)"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "svgIcon": {
+      "type": "text",
+      "required": false
+    },
+    "iconImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "order": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}

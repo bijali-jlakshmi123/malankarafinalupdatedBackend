@@ -1,0 +1,39 @@
+{
+  "kind": "singleType",
+  "collectionName": "gallery_pages",
+  "info": {
+    "singularName": "gallery-page",
+    "pluralName": "gallery-pages",
+    "displayName": "Gallery Page",
+    "description": "Gallery page settings including hero section"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroTitle": {
+      "type": "string",
+      "required": true,
+      "default": "Where Every Frame Tells a Story"
+    },
+    "heroSubtitle": {
+      "type": "text",
+      "default": "From sunrise calm to celebration nights, explore our visual journey."
+    },
+    "heroImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "seoTitle": {
+      "type": "string",
+      "default": "Gallery | Malankara Palace"
+    },
+    "seoDescription": {
+      "type": "text",
+      "default": "A visual journey through Malankara Palace. Explore our resort, lakeside beauty, and celebration moments."
+    }
+  }
+}

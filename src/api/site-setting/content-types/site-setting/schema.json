@@ -1,0 +1,49 @@
+{
+  "kind": "singleType",
+  "collectionName": "site_settings",
+  "info": {
+    "singularName": "site-setting",
+    "pluralName": "site-settings",
+    "displayName": "Site Setting",
+    "description": "Global site settings"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "siteName": {
+      "type": "string",
+      "required": true,
+      "default": "Malankara Palace"
+    },
+    "siteTagline": {
+      "type": "string",
+      "default": "LAKE VIEW RESORT & SPA"
+    },
+    "phoneNumbers": {
+      "type": "json"
+    },
+    "whatsappNumber": {
+      "type": "string"
+    },
+    "bookNowUrl": {
+      "type": "string"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "address": {
+      "type": "text"
+    },
+    "email": {
+      "type": "email"
+    },
+    "socialLinks": {
+      "type": "json"
+    }
+  }
+}

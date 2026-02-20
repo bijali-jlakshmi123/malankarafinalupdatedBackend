@@ -1,0 +1,65 @@
+{
+  "kind": "singleType",
+  "collectionName": "wedding_events_pages",
+  "info": {
+    "singularName": "wedding-events-page",
+    "pluralName": "wedding-events-pages",
+    "displayName": "Wedding Events Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroTitle": {
+      "type": "string",
+      "required": true
+    },
+    "heroSubtitle": {
+      "type": "text"
+    },
+    "heroImage": {
+      "allowedTypes": ["images"],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "introTitle": {
+      "type": "string"
+    },
+    "introSubtitle": {
+      "type": "string"
+    },
+    "introDescription1": {
+      "type": "text"
+    },
+    "introDescription2": {
+      "type": "text"
+    },
+    "parallaxImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "parallaxTitle": {
+      "type": "string",
+      "default": "A celebration of love in nature’s paradise"
+    },
+    "settingsTitle": {
+      "type": "string",
+      "default": "A Setting Made for Celebrations"
+    },
+    "settingsDescription": {
+      "type": "text"
+    },
+    "seoTitle": {
+      "type": "string",
+      "default": "Weddings & Events | Malankara Palace"
+    },
+    "seoDescription": {
+      "type": "text",
+      "default": "A serene lakeside venue for destination weddings, celebrations, and special gatherings at Malankara Palace."
+    }
+  }
+}

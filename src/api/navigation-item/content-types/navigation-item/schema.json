@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "navigation_items",
+  "info": {
+    "singularName": "navigation-item",
+    "pluralName": "navigation-items",
+    "displayName": "Navigation Item",
+    "description": "Navigation menu items"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "href": {
+      "type": "string",
+      "required": true
+    },
+    "order": {
+      "type": "integer",
+      "default": 0
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rooms_suites",
+  "info": {
+    "singularName": "rooms-suite",
+    "pluralName": "rooms-suites",
+    "displayName": "Rooms Suite",
+    "description": "Rooms and Suites"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["images"]
+    },
+    "gallery": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": ["images"]
+    },
+    "link": {
+      "type": "string"
+    },
+    "order": {
+      "type": "integer",
+      "default": 0
+    },
+    "displayIn": {
+      "type": "enumeration",
+      "enum": ["hero", "room", "both"],
+      "default": "both"
+    }
+  }
+}

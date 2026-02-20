@@ -1,0 +1,50 @@
+{
+  "kind": "singleType",
+  "collectionName": "our_stories",
+  "info": {
+    "singularName": "our-story",
+    "pluralName": "our-stories",
+    "displayName": "Our Story",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "mainContent": {
+      "type": "richtext",
+      "required": true
+    },
+    "sideContent": {
+      "type": "text"
+    },
+    "videoUrl": {
+      "type": "string"
+    },
+    "images": {
+      "allowedTypes": ["images"],
+      "type": "media",
+      "multiple": true
+    },
+    "detailedStoryTitle": {
+      "type": "string"
+    },
+    "detailedStory": {
+      "type": "richtext"
+    },
+    "narrativeTitle": {
+      "type": "string"
+    },
+    "narrativeContent": {
+      "type": "richtext"
+    }
+  }
+}

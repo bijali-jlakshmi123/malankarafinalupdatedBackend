@@ -1,0 +1,64 @@
+{
+  "kind": "singleType",
+  "collectionName": "experiences_pages",
+  "info": {
+    "singularName": "experiences-page",
+    "pluralName": "experiences-pages",
+    "displayName": "Experiences Page",
+    "description": "Experiences page settings including hero and section headers"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroTitle": {
+      "type": "string",
+      "required": true,
+      "default": "Experiences Beyond the Stay"
+    },
+    "heroSubtitle": {
+      "type": "text",
+      "default": "Enjoy curated in-house activities and outdoor adventures that take you beyond the resort."
+    },
+    "heroImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "introTitle": {
+      "type": "string",
+      "required": true,
+      "default": "Experiences by the Lake"
+    },
+    "introDescription": {
+      "type": "text",
+      "default": "Life at Malankara Palace flows gently with its surroundings, offering experiences that feel natural, peaceful, and deeply memorable."
+    },
+    "inHouseTitle": {
+      "type": "string",
+      "default": "In-House Experiences"
+    },
+    "nearbyTitle": {
+      "type": "string",
+      "default": "Nearby Experiences"
+    },
+    "noteTitle": {
+      "type": "string",
+      "default": "Note:"
+    },
+    "noteContent": {
+      "type": "text",
+      "default": "Certain experiences are seasonal and subject to weather conditions. Nearby experiences like fish netting, boat safari, and cultural performances are arranged on request and offered on a prior-demand basis."
+    },
+    "seoTitle": {
+      "type": "string",
+      "default": "Experiences | Malankara Palace"
+    },
+    "seoDescription": {
+      "type": "text",
+      "default": "Discover curated in-house and nearby experiences at Malankara Palace, from lakeside activities to nature walks."
+    }
+  }
+}

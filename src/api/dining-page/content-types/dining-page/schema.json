@@ -1,0 +1,48 @@
+{
+  "kind": "singleType",
+  "collectionName": "dining_pages",
+  "info": {
+    "singularName": "dining-page",
+    "pluralName": "dining-pages",
+    "displayName": "Dining Page",
+    "description": "Dining page settings including hero and intro section"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroTitle": {
+      "type": "string",
+      "required": true,
+      "default": "Where Taste Meets Tranquility"
+    },
+    "heroSubtitle": {
+      "type": "text",
+      "default": "Savour curated flavours in calm, view-filled dining spaces."
+    },
+    "heroImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "introTitle": {
+      "type": "string",
+      "required": true,
+      "default": "Dining by the Lake"
+    },
+    "introDescription": {
+      "type": "text",
+      "default": "Dining here is designed to be more than just a meal — it is an experience shaped by setting, mood, and flavour. With scenic views, relaxed seating, and thoughtfully prepared dishes, every dining moment is meant to be enjoyed slowly. From casual meals to curated celebration dinners, the atmosphere blends comfort with quiet elegance."
+    },
+    "seoTitle": {
+      "type": "string",
+      "default": "Dining | Malankara Palace"
+    },
+    "seoDescription": {
+      "type": "text",
+      "default": "Indulge in a premium lakeside dining experience. From multi-cuisine restaurant to candlelight dinners and live barbecue."
+    }
+  }
+}

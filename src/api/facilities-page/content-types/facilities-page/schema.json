@@ -1,0 +1,48 @@
+{
+  "kind": "singleType",
+  "collectionName": "facilities_pages",
+  "info": {
+    "singularName": "facilities-page",
+    "pluralName": "facilities-pages",
+    "displayName": "Facilities Page",
+    "description": "Facilities page settings including hero, amenities grid, and content sections"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroTitle": {
+      "type": "string",
+      "required": true,
+      "default": "Resort Facilities"
+    },
+    "heroSubtitle": {
+      "type": "text",
+      "default": "Everything you need for a comfortable, connected, and relaxing stay by the lake."
+    },
+    "heroImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "amenitiesSectionTitle": {
+      "type": "string",
+      "required": true,
+      "default": "Comfort, Convenience & Infrastructure"
+    },
+    "amenitiesSectionDescription": {
+      "type": "text",
+      "default": "Our facilities are designed to make every stay smooth, comfortable, and well-supported. From essential guest services to leisure infrastructure and family-friendly spaces, each facility is planned to enhance your time by the lake while keeping the experience relaxed and effortless."
+    },
+    "seoTitle": {
+      "type": "string",
+      "default": "Facilities | Malankara Palace"
+    },
+    "seoDescription": {
+      "type": "text",
+      "default": "Explore the premium facilities at Malankara Palace — infinity pool, multi-cuisine restaurant, games, spa, and more."
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "facility_sections",
+  "info": {
+    "singularName": "facility-section",
+    "pluralName": "facility-sections",
+    "displayName": "Facility Section",
+    "description": "Alternating image + text sections on the Facilities page (Pool & Leisure, Guest Services, Recreation)"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["images"]
+    },
+    "imagePosition": {
+      "type": "enumeration",
+      "enum": ["left", "right"],
+      "default": "left",
+      "required": true
+    },
+    "checklistItems": {
+      "type": "json",
+      "required": false
+    },
+    "checklistColumns": {
+      "type": "integer",
+      "default": 1,
+      "min": 1,
+      "max": 2
+    },
+    "order": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}

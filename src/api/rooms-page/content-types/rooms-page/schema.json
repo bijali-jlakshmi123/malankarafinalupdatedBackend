@@ -1,0 +1,40 @@
+{
+  "kind": "singleType",
+  "collectionName": "rooms_pages",
+  "info": {
+    "singularName": "rooms-page",
+    "pluralName": "rooms-pages",
+    "displayName": "Rooms Page",
+    "description": "Rooms & Suites page settings"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroTitle": {
+      "type": "string",
+      "required": true,
+      "default": "Rooms & Suites"
+    },
+    "heroSubtitle": {
+      "type": "text",
+      "default": "Experience premium comfort in stays designed to feel calm, spacious, and welcoming."
+    },
+    "heroImages": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "sectionTitle": {
+      "type": "string",
+      "required": true,
+      "default": "Thoughtfully Designed Stays by the Lake"
+    },
+    "sectionSubtitle": {
+      "type": "text",
+      "default": "Wake up to open skies, spend evenings watching the lake change colours, and rest in spaces designed for unhurried living."
+    }
+  }
+}
