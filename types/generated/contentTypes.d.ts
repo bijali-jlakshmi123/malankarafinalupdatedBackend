@@ -692,6 +692,10 @@ export interface ApiExperiencesPageExperiencesPage
       Schema.Attribute.DefaultTo<'Certain experiences are seasonal and subject to weather conditions. Nearby experiences like fish netting, boat safari, and cultural performances are arranged on request and offered on a prior-demand basis.'>;
     noteTitle: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Note:'>;
     publishedAt: Schema.Attribute.DateTime;
+    seoDescription: Schema.Attribute.Text &
+      Schema.Attribute.DefaultTo<'Discover curated in-house and nearby experiences at Malankara Palace, from lakeside activities to nature walks.'>;
+    seoTitle: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Experiences | Malankara Palace'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
