@@ -40,6 +40,32 @@
       "type": "integer",
       "default": 0
     },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "heroSlogan": {
+      "type": "string"
+    },
+    "heroSubtext": {
+      "type": "text"
+    },
+    "beds": {
+      "type": "string"
+    },
+    "size": {
+      "type": "string"
+    },
+    "occupancy": {
+      "type": "string"
+    },
+    "view": {
+      "type": "string"
+    },
+    "amenities": {
+      "type": "json"
+    },
     "displayIn": {
       "type": "enumeration",
       "enum": ["hero", "room", "both"],

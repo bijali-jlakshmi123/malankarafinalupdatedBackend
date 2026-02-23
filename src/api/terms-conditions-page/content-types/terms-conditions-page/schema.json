@@ -1,0 +1,31 @@
+{
+  "kind": "singleType",
+  "collectionName": "terms_conditions_pages",
+  "info": {
+    "singularName": "terms-conditions-page",
+    "pluralName": "terms-conditions-pages",
+    "displayName": "Terms & Conditions Page",
+    "description": "Settings for the Terms & Conditions page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "default": "Terms & Conditions"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "sections": {
+      "type": "json"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "corporate_services",
+  "info": {
+    "singularName": "corporate-service",
+    "pluralName": "corporate-services",
+    "displayName": "Corporate Service",
+    "description": "Individual services for the Corporate page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["images"]
+    },
+    "order": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}

@@ -462,6 +462,114 @@ export interface ApiAmenityIconAmenityIcon extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiBlogPageBlogPage extends Struct.SingleTypeSchema {
+  collectionName: 'blog_pages';
+  info: {
+    description: 'Settings for the Blog listing page';
+    displayName: 'Blog Page';
+    pluralName: 'blog-pages';
+    singularName: 'blog-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    heroImage: Schema.Attribute.Media<'images'>;
+    heroSubtitle: Schema.Attribute.Text &
+      Schema.Attribute.DefaultTo<'Discover local attractions, hidden spots, and travel tips around the lake and hills.'>;
+    heroTitle: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Travel Stories & Destination Guides'>;
+    introTitle: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Moments, Places & Meaningful Journeys'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::blog-page.blog-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiBlogPostBlogPost extends Struct.CollectionTypeSchema {
+  collectionName: 'blog_posts';
+  info: {
+    description: 'Individual blog articles';
+    displayName: 'Blog Post';
+    pluralName: 'blog-posts';
+    singularName: 'blog-post';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    category: Schema.Attribute.String;
+    content: Schema.Attribute.RichText;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    date: Schema.Attribute.Date;
+    excerpt: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::blog-post.blog-post'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
+    slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiBookingPolicyPageBookingPolicyPage
+  extends Struct.SingleTypeSchema {
+  collectionName: 'booking_policy_pages';
+  info: {
+    description: 'Settings for the Booking Policy page';
+    displayName: 'Booking Policy Page';
+    pluralName: 'booking-policy-pages';
+    singularName: 'booking-policy-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    image: Schema.Attribute.Media<'images'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::booking-policy-page.booking-policy-page'
+    > &
+      Schema.Attribute.Private;
+    policies: Schema.Attribute.JSON;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Booking Policies & Stay Information'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiContactPageContactPage extends Struct.SingleTypeSchema {
   collectionName: 'contact_pages';
   info: {
@@ -491,6 +599,78 @@ export interface ApiContactPageContactPage extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     mapEmbedUrl: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiCorporatePageCorporatePage extends Struct.SingleTypeSchema {
+  collectionName: 'corporate_pages';
+  info: {
+    description: 'Page settings for Corporate & MICE';
+    displayName: 'Corporate Page';
+    pluralName: 'corporate-pages';
+    singularName: 'corporate-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    heroImage: Schema.Attribute.Media<'images'>;
+    heroSubtitle: Schema.Attribute.Text &
+      Schema.Attribute.DefaultTo<'A scenic setting for professional meetings and team engagements.'>;
+    heroTitle: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Business Gatherings by Nature'>;
+    introDescription: Schema.Attribute.Text &
+      Schema.Attribute.DefaultTo<'A peaceful lakeside setting for focused meetings and meaningful corporate gatherings.'>;
+    introTitle: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'A refreshing alternative to conventional meeting spaces'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::corporate-page.corporate-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiCorporateServiceCorporateService
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'corporate_services';
+  info: {
+    description: 'Individual services for the Corporate page';
+    displayName: 'Corporate Service';
+    pluralName: 'corporate-services';
+    singularName: 'corporate-service';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::corporate-service.corporate-service'
+    > &
+      Schema.Attribute.Private;
+    order: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1077,6 +1257,8 @@ export interface ApiRoomsSuiteRoomsSuite extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    amenities: Schema.Attribute.JSON;
+    beds: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1084,6 +1266,8 @@ export interface ApiRoomsSuiteRoomsSuite extends Struct.CollectionTypeSchema {
     displayIn: Schema.Attribute.Enumeration<['hero', 'room', 'both']> &
       Schema.Attribute.DefaultTo<'both'>;
     gallery: Schema.Attribute.Media<'images', true>;
+    heroSlogan: Schema.Attribute.String;
+    heroSubtext: Schema.Attribute.Text;
     image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     link: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -1092,13 +1276,17 @@ export interface ApiRoomsSuiteRoomsSuite extends Struct.CollectionTypeSchema {
       'api::rooms-suite.rooms-suite'
     > &
       Schema.Attribute.Private;
+    occupancy: Schema.Attribute.String;
     order: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
     publishedAt: Schema.Attribute.DateTime;
+    size: Schema.Attribute.String;
+    slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
     subtitle: Schema.Attribute.String;
     title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    view: Schema.Attribute.String;
   };
 }
 
@@ -1139,6 +1327,41 @@ export interface ApiSiteSettingSiteSetting extends Struct.SingleTypeSchema {
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     whatsappNumber: Schema.Attribute.String;
+  };
+}
+
+export interface ApiTermsConditionsPageTermsConditionsPage
+  extends Struct.SingleTypeSchema {
+  collectionName: 'terms_conditions_pages';
+  info: {
+    description: 'Settings for the Terms & Conditions page';
+    displayName: 'Terms & Conditions Page';
+    pluralName: 'terms-conditions-pages';
+    singularName: 'terms-conditions-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    content: Schema.Attribute.RichText;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::terms-conditions-page.terms-conditions-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    sections: Schema.Attribute.JSON;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Terms & Conditions'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1767,7 +1990,12 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::amenity-icon.amenity-icon': ApiAmenityIconAmenityIcon;
+      'api::blog-page.blog-page': ApiBlogPageBlogPage;
+      'api::blog-post.blog-post': ApiBlogPostBlogPost;
+      'api::booking-policy-page.booking-policy-page': ApiBookingPolicyPageBookingPolicyPage;
       'api::contact-page.contact-page': ApiContactPageContactPage;
+      'api::corporate-page.corporate-page': ApiCorporatePageCorporatePage;
+      'api::corporate-service.corporate-service': ApiCorporateServiceCorporateService;
       'api::dining-page.dining-page': ApiDiningPageDiningPage;
       'api::dining-section.dining-section': ApiDiningSectionDiningSection;
       'api::dining.dining': ApiDiningDining;
@@ -1785,6 +2013,7 @@ declare module '@strapi/strapi' {
       'api::rooms-page.rooms-page': ApiRoomsPageRoomsPage;
       'api::rooms-suite.rooms-suite': ApiRoomsSuiteRoomsSuite;
       'api::site-setting.site-setting': ApiSiteSettingSiteSetting;
+      'api::terms-conditions-page.terms-conditions-page': ApiTermsConditionsPageTermsConditionsPage;
       'api::wedding-event.wedding-event': ApiWeddingEventWeddingEvent;
       'api::wedding-events-page.wedding-events-page': ApiWeddingEventsPageWeddingEventsPage;
       'api::wellness.wellness': ApiWellnessWellness;

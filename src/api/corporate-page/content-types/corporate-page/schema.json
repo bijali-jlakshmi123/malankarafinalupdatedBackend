@@ -1,0 +1,43 @@
+{
+  "kind": "singleType",
+  "collectionName": "corporate_pages",
+  "info": {
+    "singularName": "corporate-page",
+    "pluralName": "corporate-pages",
+    "displayName": "Corporate Page",
+    "description": "Page settings for Corporate & MICE"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "heroTitle": {
+      "type": "string",
+      "required": true,
+      "default": "Business Gatherings by Nature"
+    },
+    "heroSubtitle": {
+      "type": "text",
+      "default": "A scenic setting for professional meetings and team engagements."
+    },
+    "heroImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "introTitle": {
+      "type": "string",
+      "default": "A refreshing alternative to conventional meeting spaces"
+    },
+    "introDescription": {
+      "type": "text",
+      "default": "A peaceful lakeside setting for focused meetings and meaningful corporate gatherings."
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    }
+  }
+}

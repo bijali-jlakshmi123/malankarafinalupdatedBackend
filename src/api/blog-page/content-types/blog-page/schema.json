@@ -1,0 +1,39 @@
+{
+  "kind": "singleType",
+  "collectionName": "blog_pages",
+  "info": {
+    "singularName": "blog-page",
+    "pluralName": "blog-pages",
+    "displayName": "Blog Page",
+    "description": "Settings for the Blog listing page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "heroTitle": {
+      "type": "string",
+      "required": true,
+      "default": "Travel Stories & Destination Guides"
+    },
+    "heroSubtitle": {
+      "type": "text",
+      "default": "Discover local attractions, hidden spots, and travel tips around the lake and hills."
+    },
+    "heroImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "introTitle": {
+      "type": "string",
+      "default": "Moments, Places & Meaningful Journeys"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    }
+  }
+}
